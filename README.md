@@ -5,9 +5,9 @@ It includes authentication (JWT), product management, cart handling, and API int
 
 Frontend
 
-⚡ Next.js 16
+⚡ Next.js 
 
-⚛️ React 19
+⚛️ React
 
 💅 Tailwind CSS
 
