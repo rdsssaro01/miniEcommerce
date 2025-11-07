@@ -29,10 +29,13 @@ Backend
 🪶 Class Validator + DTOs
 
 ⚙️ Installation
+
 1️⃣ Clone the Repository
 
 2️⃣ Setup Backend (NestJS)
+
 cd backend
+
 npm install
 
 
@@ -51,7 +54,9 @@ npm run start:dev
 Backend will run on Local 👉 http://localhost:5000
 
 3️⃣ Setup Frontend (Next.js)
+
 cd ../frontend
+
 npm install
 
 
@@ -92,6 +97,7 @@ MongoDB Integration
 Validation & Error Handling
 
 🔗 API Endpoints
+
 Method	Endpoint	Description
 POST	/auth/register	Register new user
 POST	/auth/login	Login user
@@ -100,7 +106,9 @@ GET	/products/:id	Get product by ID
 POST	/products	Add new product
 PUT	/products/:id	Update product
 DELETE	/products/:id	Delete product
+
 🧑‍💻 Deployment
+
 Frontend (Next.js)
 
 Deploy easily using Vercel
@@ -129,6 +137,7 @@ Set environment variables (MONGO_URI, JWT_SECRET).
 Deploy!
 
 🧾 Example Environment Setup
+
 .env (NestJS)
 PORT=5000
 MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/mini
