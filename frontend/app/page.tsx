@@ -20,7 +20,11 @@ export default function Home() {
   const [categories, setCategories] = useState<Category[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const { loading, fetchData, handlePrev, handleNext, userToken, page, totalPages, products, perpage } = useProduct();
-
+  useEffect(() => {
+    if (userToken != null) {
+      fetchData();
+    }
+  }, []);
   return (
     <div className="bg-gradient-to-b from-slate-50 to-white">
       {/* Hero Section */}
@@ -135,10 +139,11 @@ export default function Home() {
 }
 
 function ProductCard({ product, featured = false }: { product: Product; featured?: boolean }) {
+  console.log("urlimage", product.imageUrl)
   return (
     <Link href={`/products/${product._id}`}>
       <Card className="group cursor-pointer hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-        <CardHeader className="p-0 relative">
+        <CardHeader className="p-0 relative ">
           {featured && (
             <Badge className="absolute top-2 right-2 z-10 bg-amber-500 hover:bg-amber-600">
               <Star className="h-3 w-3 mr-1 fill-white" />
@@ -146,9 +151,9 @@ function ProductCard({ product, featured = false }: { product: Product; featured
             </Badge>
           )}
           <div className="aspect-square bg-slate-100 overflow-hidden rounded-t-lg">
-            {product.image_url ? (
+            {product.imageUrl ? (
               <img
-                src={product.image_url}
+                src={product.imageUrl}
                 alt={product.name}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />

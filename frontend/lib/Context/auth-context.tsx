@@ -53,7 +53,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (token) {
         localStorage.setItem('token', token);
         setUserToken(token);
-        console.log('Token stored successfully:', token);
+        // console.log('Token stored successfully:', token);
         setLoading(false);
 
         return { status: true, message: res.message };

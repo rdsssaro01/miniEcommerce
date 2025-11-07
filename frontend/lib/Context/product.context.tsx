@@ -25,7 +25,7 @@ export type Product = {
     name: string;
     price: number;
     description: string | null;
-    image_url: string | null;
+    imageUrl: string | null;
     quantity: number;
     featured: boolean;
     stock: number;

@@ -119,9 +119,9 @@ export default function ProductDetail() {
                   Featured
                 </Badge>
               )}
-              {product.image_url ? (
+              {product.imageUrl ? (
                 <img
-                  src={product.image_url}
+                  src={product.imageUrl}
                   alt={product.name}
                   className="w-full h-full object-cover"
                 />
