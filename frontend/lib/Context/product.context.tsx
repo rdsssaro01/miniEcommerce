@@ -1,6 +1,6 @@
 'use client';
 import { createContext, useContext, useEffect, useState } from "react";
-import { apiGet, apiPost } from "../api";
+import { apiGet } from "../api";
 import { useRouter } from "next/navigation";
 
 type ProductContextType = {
@@ -10,17 +10,15 @@ type ProductContextType = {
     perpage: number;
     products: Product[];
     totalPages: number;
-    fetchData: () => Promise<void>;
-    handlePrev: () => Promise<void>;
-    handleNext: () => Promise<void>;
+    fetchData: (pageNum?: number) => Promise<void>;
+    handlePrev: () => void;
+    handleNext: () => void;
     search: string;
     setSearch: (search: string) => void;
     setCart: (cart: Product[]) => void;
     cart: Product[];
     addToCart: (product: Product) => void;
 };
-
-
 
 export type Product = {
     _id: string;
@@ -42,70 +40,80 @@ export type Category = {
     description: string | null;
 };
 
-
 const ProductContext = createContext<ProductContextType | undefined>(undefined);
+
 export function ProductProvider({ children }: { children: React.ReactNode }) {
     const [userToken, setUserToken] = useState<string | null>(null);
     const [products, setProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState(true);
     const [page, setPage] = useState(1);
-    const [totalPages, setTotalpages] = useState(1);
+    const [totalPages, setTotalPages] = useState(1);
     const [perpage, setPerPage] = useState(10);
-    const [search, setSearch] = useState('');
+    const [search, setSearch] = useState("");
     const [cart, setCart] = useState<Product[]>([]);
 
     const router = useRouter();
+
+    // Load token and initial data once
     useEffect(() => {
-        const userToken = localStorage.getItem("token");
-        if (!userToken) {
+        const token = localStorage.getItem("token");
+        if (token == null) {
             router.replace("/login");
             return;
         }
-        fetchData();
-        getCartDtails();
-    }, [page, totalPages]);
+        setUserToken(token);
+        getCartDetails();
+    }, []);
 
+    // Fetch products whenever page or search changes
+    useEffect(() => {
+        if (userToken != null) {
+            fetchData();
+        }
+    }, [page, search, userToken]);
 
-
-    const getCartDtails = () => {
+    const getCartDetails = () => {
         if (typeof window !== "undefined") {
             const savedCart = JSON.parse(localStorage.getItem("cart") || "[]");
             setCart(savedCart);
         }
     };
+
     const fetchData = async () => {
+        console.log("Fetching data for page:", page, "search:", search);
         setLoading(true);
         try {
             const queryString = new URLSearchParams({
                 page: page.toString(),
                 perPage: perpage.toString(),
-                search: search
+                search: search,
             }).toString();
 
-            const fullUrl = `products?${queryString}`;
+            const res = await apiGet(`products?${queryString}`, true);
 
-            const res = await apiGet(fullUrl, true);
             if (res?.products) {
                 setProducts(res.products);
+                setPerPage(res.limit);
                 setPage(res.page);
-                setTotalpages(res.totalPages);
+                setTotalPages(res.totalPages);
             }
         } catch (err) {
-            console.error('Failed to fetch products', err);
+            console.error("Failed to fetch products", err);
         } finally {
             setLoading(false);
         }
     };
 
-
-    const handlePrev = async () => {
-        setPage(page - 1);
-        fetchData()
+    const handlePrev = () => {
+        if (page > 1) {
+            setPage((prev) => prev - 1);
+        }
     };
-    const handleNext = async () => {
-        setPage(page + 1);
-        console.log("dfgdfgdfg", page);
-        fetchData();
+
+    const handleNext = () => {
+        if (page < totalPages) {
+            setPage((prev) => prev + 1);
+        }
     };
 
     const addToCart = (product: Product) => {
@@ -123,15 +131,24 @@ export function ProductProvider({ children }: { children: React.ReactNode }) {
     };
 
     return (
-        <ProductContext.Provider value={
-            {
-                loading, fetchData, handlePrev,
-                handleNext, userToken, page, totalPages,
-                products, perpage, search, setSearch,
-                setCart, cart, addToCart
-
-            }
-        }>
+        <ProductContext.Provider
+            value={{
+                loading,
+                fetchData,
+                handlePrev,
+                handleNext,
+                userToken,
+                page,
+                totalPages,
+                products,
+                perpage,
+                search,
+                setSearch,
+                setCart,
+                cart,
+                addToCart,
+            }}
+        >
             {children}
         </ProductContext.Provider>
     );
@@ -139,8 +156,8 @@ export function ProductProvider({ children }: { children: React.ReactNode }) {
 
 export function useProduct() {
     const context = useContext(ProductContext);
-    if (context === undefined) {
-        throw new Error('useAuth must be used within an ProductProvider');
+    if (!context) {
+        throw new Error("useProduct must be used within a ProductProvider");
     }
     return context;
 }
