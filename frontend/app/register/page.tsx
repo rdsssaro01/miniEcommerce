@@ -138,7 +138,7 @@ export default function RegisterPage() {
                   Creating account...
                 </>
               ) : (
-                'Sign Up'
+                'Register'
               )}
             </Button>
             <p className="text-sm text-center text-slate-600">

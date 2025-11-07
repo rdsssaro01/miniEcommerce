@@ -97,10 +97,10 @@ export function Navbar() {
             {userToken === null && (
               <div className="flex items-center space-x-2">
                 <Link href="/login">
-                  <Button variant="ghost">Sign In</Button>
+                  <Button variant="ghost">Login</Button>
                 </Link>
                 <Link href="/register">
-                  <Button className="bg-emerald-600 hover:bg-emerald-700">Sign Up</Button>
+                  <Button className="bg-emerald-600 hover:bg-emerald-700">Register</Button>
                 </Link>
               </div>
             )}
