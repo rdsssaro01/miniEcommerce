@@ -1,0 +1,170 @@
+[
+    {
+        "name": "Wireless Mouse",
+        "price": 799,
+        "description": "Ergonomic 2.4GHz wireless mouse with adjustable DPI and silent clicks.",
+        "imageUrl": "https://example.com/images/mouse.jpg",
+        "categoryId": 1
+    },
+    {
+        "name": "Mechanical Keyboard",
+        "price": 2499,
+        "description": "RGB mechanical keyboard with blue switches and aluminum frame.",
+        "imageUrl": "https://example.com/images/keyboard.jpg",
+        "categoryId": 1
+    },
+    {
+        "name": "Gaming Headset",
+        "price": 1999,
+        "description": "Over-ear headset with noise-cancelling mic and 7.1 surround sound.",
+        "imageUrl": "https://example.com/images/headset.jpg",
+        "categoryId": 1
+    },
+    {
+        "name": "USB-C Hub",
+        "price": 1299,
+        "description": "7-in-1 USB-C hub with HDMI, SD card reader, and 3 USB 3.0 ports.",
+        "imageUrl": "https://example.com/images/hub.jpg",
+        "categoryId": 2
+    },
+    {
+        "name": "Bluetooth Speaker",
+        "price": 1599,
+        "description": "Portable waterproof Bluetooth speaker with 10-hour battery life.",
+        "imageUrl": "https://example.com/images/speaker.jpg",
+        "categoryId": 1
+    },
+    {
+        "name": "Smartwatch",
+        "price": 3499,
+        "description": "Fitness tracker with heart rate monitor and notification alerts.",
+        "imageUrl": "https://example.com/images/smartwatch.jpg",
+        "categoryId": 1
+    },
+    {
+        "name": "Wireless Earbuds",
+        "price": 2199,
+        "description": "True wireless earbuds with touch controls and charging case.",
+        "imageUrl": "https://example.com/images/earbuds.jpg",
+        "categoryId": 1
+    },
+    {
+        "name": "Laptop Stand",
+        "price": 899,
+        "description": "Adjustable aluminum laptop stand with cooling vents.",
+        "imageUrl": "https://example.com/images/laptop-stand.jpg",
+        "categoryId": 5
+    },
+    {
+        "name": "Phone Tripod",
+        "price": 699,
+        "description": "Flexible phone tripod with Bluetooth remote and 360° rotation.",
+        "imageUrl": "https://example.com/images/tripod.jpg",
+        "categoryId": 2
+    },
+    {
+        "name": "Power Bank",
+        "price": 1699,
+        "description": "10000mAh fast-charging power bank with dual USB output.",
+        "imageUrl": "https://example.com/images/powerbank.jpg",
+        "categoryId": 2
+    },
+    {
+        "name": "Smart LED Bulb",
+        "price": 499,
+        "description": "Wi-Fi-enabled smart bulb with voice control and color changing.",
+        "imageUrl": "https://example.com/images/smartbulb.jpg",
+        "categoryId": 4
+    },
+    {
+        "name": "Men’s Analog Watch",
+        "price": 2799,
+        "description": "Classic stainless steel analog wristwatch with date display.",
+        "imageUrl": "https://example.com/images/mens-watch.jpg",
+        "categoryId": 3
+    },
+    {
+        "name": "Women’s Handbag",
+        "price": 1899,
+        "description": "Stylish leather handbag with spacious compartments.",
+        "imageUrl": "https://example.com/images/handbag.jpg",
+        "categoryId": 3
+    },
+    {
+        "name": "Running Shoes",
+        "price": 3299,
+        "description": "Lightweight breathable running shoes for men and women.",
+        "imageUrl": "https://example.com/images/shoes.jpg",
+        "categoryId": 3
+    },
+    {
+        "name": "Sunglasses",
+        "price": 999,
+        "description": "UV-protected polarized sunglasses with matte black frame.",
+        "imageUrl": "https://example.com/images/sunglasses.jpg",
+        "categoryId": 3
+    },
+    {
+        "name": "Wireless Charger",
+        "price": 1299,
+        "description": "Fast wireless charging pad compatible with Qi-enabled devices.",
+        "imageUrl": "https://example.com/images/wireless-charger.jpg",
+        "categoryId": 2
+    },
+    {
+        "name": "Coffee Mug",
+        "price": 499,
+        "description": "Ceramic coffee mug with heat-resistant handle, 350ml capacity.",
+        "imageUrl": "https://example.com/images/mug.jpg",
+        "categoryId": 4
+    },
+    {
+        "name": "Backpack",
+        "price": 2499,
+        "description": "Durable waterproof laptop backpack with USB charging port.",
+        "imageUrl": "https://example.com/images/backpack.jpg",
+        "categoryId": 3
+    },
+    {
+        "name": "Desk Lamp",
+        "price": 1199,
+        "description": "LED desk lamp with adjustable brightness and flexible neck.",
+        "imageUrl": "https://example.com/images/lamp.jpg",
+        "categoryId": 5
+    },
+    {
+        "name": "Portable Hard Drive",
+        "price": 4999,
+        "description": "1TB USB 3.0 portable external hard drive for fast data transfer.",
+        "imageUrl": "https://example.com/images/harddrive.jpg",
+        "categoryId": 1
+    },
+    {
+        "name": "Water Bottle",
+        "price": 699,
+        "description": "Stainless steel vacuum insulated water bottle, 750ml.",
+        "imageUrl": "https://example.com/images/bottle.jpg",
+        "categoryId": 4
+    },
+    {
+        "name": "Wireless Keyboard & Mouse Combo",
+        "price": 2899,
+        "description": "2.4GHz wireless keyboard and mouse combo with long battery life.",
+        "imageUrl": "https://example.com/images/combo.jpg",
+        "categoryId": 1
+    },
+    {
+        "name": "Bluetooth Neckband",
+        "price": 1499,
+        "description": "Lightweight neckband earphones with magnetic earbuds.",
+        "imageUrl": "https://example.com/images/neckband.jpg",
+        "categoryId": 2
+    },
+    {
+        "name": "Mini Projector",
+        "price": 8999,
+        "description": "Compact HD mini projector for home entertainment.",
+        "imageUrl": "https://example.com/images/projector.jpg",
+        "categoryId": 4
+    }
+]
