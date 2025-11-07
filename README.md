@@ -1,33 +1,8 @@
 A full-stack Mini e-commerce application built using Next.js for the frontend and NestJS for the backend.
 It includes authentication (JWT), product management, cart handling, and API integration.
 
-📁 Project Structure
-MiniEcommerce/
-│
-├── frontend/           # Next.js (React + TypeScript)
-│   ├── app/            # App router pages
-│   ├── components/     # Reusable UI components
-│   ├── public/         # Static assets
-│   ├── utils/          # Helper functions
-│   ├── package.json
-│   └── ...
-│
-├── backend/            # NestJS (API + Database)
-│   ├── src/
-│   │   ├── main.ts
-│   │   ├── app.module.ts
-│   │   ├── users/
-│   │   ├── products/
-│   │   ├── auth/
-│   │   └── ...
-│   ├── package.json
-│   └── ...
-│
-├── .gitignore
-├── README.md
-└── ...
-
 🚀 Tech Stack
+
 Frontend
 
 ⚡ Next.js 16
@@ -39,6 +14,7 @@ Frontend
 🔐 JWT Authentication
 
 🛒 LocalStorage for cart persistence
+
 
 Backend
 
@@ -92,6 +68,7 @@ npm run dev
 Frontend will run on Local👉 http://localhost:3000
 
 🧩 Features
+
 🖥️ Frontend
 
 User Registration & Login
