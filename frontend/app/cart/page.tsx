@@ -64,9 +64,9 @@ export default function CartPage() {
                             {cart.map(item => (
                                 <div key={item._id} className="flex items-center bg-white shadow-sm rounded-lg p-4">
                                     <div className="w-24 h-24 bg-slate-100 rounded overflow-hidden flex items-center justify-center mr-4">
-                                        {item.image_url ? (
+                                        {item.imageUrl ? (
 
-                                            <img src={item.image_url} alt={item.name} className="w-full h-full object-cover" />
+                                            <img src={item.imageUrl} alt={item.name} className="w-full h-full object-cover" />
                                         ) : (
                                             <div className="text-slate-400">No Image</div>
                                         )}
