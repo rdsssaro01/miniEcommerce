@@ -165,5 +165,5 @@ Full Stack Developer — Flutter | Next.js | NestJS
 
 https://www.linkedin.com/in/saravananr007/
 
-Live Demo : mini-ecommerce-drab-xi.vercel.app
+Live Demo : https://mini-ecommerce-drab-xi.vercel.app
 
